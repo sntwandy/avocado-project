@@ -9,7 +9,7 @@ const Avo = async (request: NextApiRequest, response: NextApiResponse) => {
 
   response.statusCode = 200 //okay
   response.setHeader('Content-type', 'application/json')
-  response.end(JSON.stringify({ data: avo }))
+  response.end(JSON.stringify(avo))
   // other away by nextjs:
 
   // response.status(200).json(avo);

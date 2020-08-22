@@ -12,7 +12,7 @@ const ProductPage = () => {
       window
         .fetch(`/api/avo/${id}`)
         .then((response) => response.json())
-        .then(({ data }) => setAvo(data))
+        .then((avo) => setAvo(avo))
         .catch((error) => console.error(error.message))
   }, [id])
 
