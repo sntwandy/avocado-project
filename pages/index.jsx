@@ -6,7 +6,7 @@ import ProductList from '@components/ProductList/ProductList'
 
 export const getServerSideProps = async () => {
   const response = await fetch('https://platzi-avo.vercel.app/api/avo')
-  const { data: productList }: TAPIAvoResponse = await response.json()
+  const { data: productList } = await response.json()
 
   return {
     props: {
@@ -15,7 +15,7 @@ export const getServerSideProps = async () => {
   }
 }
 
-const HomePage = ({ productList }: { productList: TProduct }) => {
+const HomePage = ({ productList }) => {
   return (
     <Layout>
       <KawaiiHeader />
